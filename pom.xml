@@ -73,6 +73,8 @@
 
     <!-- 所有的依赖的版本都必须要在这里定义好，不在具体的dependency写实际的version -->
     <properties>
+        <additionalJOption>-Xdoclint:none</additionalJOption>
+        <skipTests>true</skipTests>
         <junit.version>4.6</junit.version>
         <spring.version>3.2.4.RELEASE</spring.version>
         <commons-lang.version>2.4</commons-lang.version>
@@ -308,21 +310,6 @@
                         <id>attach-javadoc</id>
                         <goals>
                             <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!--maven-gpg-plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>sign-artifacts</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
